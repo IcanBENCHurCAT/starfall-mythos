@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly.
+
+config_version=5
+
+[application]
+
+config/name="Starfall Mythos"
+config/description="STARFALL MYTHOS - a 16-bit top-down tale of first contact in the extraterrestrial-mythos universe."
+run/main_scene="res://scenes/title.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/bg_color=Color(0.03, 0.03, 0.09, 1)
+
+[autoload]
+
+Game="*res://scripts/game.gd"
+MythosState="*res://scripts/mythos/player_state.gd"
+StoryDB="*res://scripts/mythos/story_db.gd"
+Anchors="*res://scripts/mythos/anchors.gd"
+SceneDirector="*res://scripts/mythos/scene_director.gd"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/resizable=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

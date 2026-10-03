@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/title.gd" id="1"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.03, 0.03, 0.09, 1)
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -70.0
+offset_right = 90.0
+offset_bottom = 70.0
+theme_override_constants/separation = 6
+
+[node name="TitleLabel" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "STARFALL MYTHOS"
+horizontal_alignment = 1
+
+[node name="SubLabel" type="Label" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.45, 0.85, 0.85, 1)
+text = "a 16-bit tale of first contact"
+horizontal_alignment = 1
+
+[node name="BeginButton" type="Button" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Begin the descent"
+
+[node name="ContinueButton" type="Button" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Resume divergence anchor"
+
+[node name="AnchorPicker" type="OptionButton" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+
+[node name="SeedRow" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="SeedLabel" type="Label" parent="VBox/SeedRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Dice seed:"
+
+[node name="SeedEdit" type="LineEdit" parent="VBox/SeedRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 8
+text = "12345"
+
+[node name="GalleryButton" type="Button" parent="VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Endings gallery"

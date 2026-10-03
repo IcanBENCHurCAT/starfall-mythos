@@ -1,0 +1,11 @@
+# Godot-specific ignores
+.godot/
+*.translation
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*~
+*.bak
