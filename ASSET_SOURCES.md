@@ -19,6 +19,14 @@ licenses below are what the source claims today, not legal advice.
 characters, monsters, animals, background-elements, items, fx, hud, sounds, music.
 Top-down 16-bit style, matches this engine's 16x16 tile / 32x32 sprite contract.
 
+`tile-metadata.json` (added 2026-10-05) is the AI-ready index for
+`background-elements/0-tileset.png`: grid geometry, the three background key
+colors (white/maroon/light-blue, varies per tile), and 18 verified multi-tile
+objects with their exact cell layouts. The v1 level POC mis-mapped multi-tile
+sprites because this metadata did not exist; `tools/build_level_poc.py` now
+assembles objects from it. Extend this file (not the builder) when new sheets
+or objects get verified.
+
 ## Manifest rule
 
 Every third-party file gets one line: file, author, license, source URL, date checked.
